@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Porsche Website</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+    color:white;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://images-porsche.imgix.net/-/media/0B3F90A75B0141FF8BED694C3C1A323B_7C02423B08CB49C8801E208B2D16A51E_CZ25W18OX0004-911-gt3-white-side?w=2560&h=1440&q=45&crop=faces%2Centropy%2Cedges&auto=format");
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    height:100vh;
+}
+
+.main{
+    width:100%;
+    height:100vh;
+}
+
+/* NAVBAR */
+.navbar{
+    width:90%;
+    margin:auto;
+    padding:20px 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:28px;
+    color:gainsboro;
+    font-weight:bold;
+}
+
+/* MENU */
+.menu{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.menu li{
+    position:relative;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    padding:8px;
+}
+
+.menu a:hover{
+    color:wheat;
+}
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:35px;
+    left:0;
+    background:rgba(0,0,0,0.9);
+    min-width:150px;
+    border-radius:5px;
+}
+
+.dropdown-content li{
+    list-style:none;
+}
+
+.dropdown-content a{
+    display:block;
+    padding:10px;
+}
+
+.dropdown-content a:hover{
+    background:wheat;
+    color:black;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+.search input{
+    padding:6px;
+    border:none;
+    outline:none;
+}
+
+.search button{
+    padding:6px 10px;
+    background:wheat;
+    border:none;
+    cursor:pointer;
+}
+.content{
+    width:50%;
+    padding:100px 5%;
+}
+
+.content h1{
+    font-size:55px;
+}
+
+.content span{
+    color:wheat;
+}
+
+.content p{
+    margin:20px 0;
+    line-height:1.6;
+}
+
+.join{
+    padding:12px 25px;
+    background:wheat;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* LOGIN FORM */
+.form{
+    width:300px;
+    background:rgba(0,0,0,0.7);
+    padding:25px;
+    border-radius:10px;
+    position:absolute;
+    top:150px;
+    right:80px;
+}
+
+.form h2{
+    text-align:center;
+    background:white;
+    color:black;
+    padding:8px;
+    border-radius:5px;
+    margin-bottom:20px;
+}
+
+.form input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    background:transparent;
+    border:none;
+    border-bottom:1px solid white;
+    color:white;
+}
+
+.form input:focus{
+    border-bottom:1px solid wheat;
+    outline:none;
+}
+
+.login-btn{
+    width:100%;
+    padding:10px;
+    background:wheat;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.link{
+    text-align:center;
+    margin-top:10px;
+    font-size:14px;
+}
+
+.link a{
+    color:wheat;
+    text-decoration:none;
+}
+
+.liw{
+    text-align:center;
+    margin:10px 0;
+}
+
+.icons{
+    text-align:center;
+    font-size:20px;
+}
+
+.icons span{
+    margin:0 8px;
+    cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="navbar">
+
+            <div class="logo">Porsche</div>
+
+            <ul class="menu">
+
+                <li><a href="#">HOME</a></li>
+
+                <li class="dropdown">
+                <a href="#">ABOUT ▼</a>
+                <ul class="dropdown-content">
+                <li><a href="#">History</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Vision</a></li>
+                </ul>
+                </li>
+
+                <li class="dropdown">
+                <a href="#">SERVICE ▼</a>
+                <ul class="dropdown-content">
+                <li><a href="#">Maintenance</a></li>
+                <li><a href="#">Repair</a></li>
+                <li><a href="#">Support</a></li>
+                </ul>
+                </li>
+
+                <li class="dropdown">
+                <a href="#">DESIGN ▼</a>
+                <ul class="dropdown-content">
+                <li><a href="#">Interior</a></li>
+                <li><a href="#">Exterior</a></li>
+                <li><a href="#">Technology</a></li>
+                </ul>
+                </li>
+
+                <li><a href="#">CONTACT</a></li>
+
+            </ul>
+
+            <div class="search">
+            <input type="text" placeholder="Type to Search">
+            <button>Search</button>
+            </div>
+
+            </div>
+            <div class="content">
+            <h1>Porsche 911 GT3RS <br><span>Luxurious</span><br>Premium Cars</h1>
+
+            <p>
+            Porsche is a German luxury automobile manufacturer known for blending
+            performance, precision engineering, and iconic design.
+            </p>
+
+            <button class="join">JOIN US</button>
+            </div>
+            <div class="form">
+
+            <h2>Login Here</h2>
+
+            <form>
+            <input type="email" placeholder="Enter Email Here" required>
+            <input type="password" placeholder="Enter Password Here" required>
+            <button type="submit" class="login-btn">Login</button>
+            </form>
+
+            <p class="link">
+            Don't have an account?<br>
+            <a href="formm.html">Sign up here</a>
+            </p>
+
+            <p class="liw">Log in with</p>
+
+            <div class="icons">
+            <span>f</span>
+            <span>G</span>
+            <span>t</span>
+            <span>S</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

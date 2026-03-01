@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Table task</h1>
+    <div id="tableContainer"></div>
+    <script>
+        let table = document.createElement("table");
+        table.border = "1";
+        table.style.borderCollapse = "collapse";
+        for (let i = 0; i < 5; i++) {
+            let row = document.createElement("tr");
+            for (let j = 0; j < 5; j++) {let cell = document.createElement("td");
+                // cell.textContent = "*";
+                cell.textContent = `Row ${i+1}, Col ${j+1}`;
+                cell.style.padding = "10px";
+                row.appendChild(cell);
+            }
+            table.appendChild(row);
+        }
+        document.getElementById("tableContainer").appendChild(table);
+    </script>
+</body>
+</html>

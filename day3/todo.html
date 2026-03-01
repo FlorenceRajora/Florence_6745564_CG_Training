@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todo List</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background: white;
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+li {
+    background: antiquewhite;
+    margin-bottom: 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.delete-btn {
+    background: red;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+th, td {
+    background: antiquewhite;
+    padding: 8px;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Todo List</h2>
+
+    <div class="input-area">
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button onclick="addTask()">Add</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <h3>Completed Tasks</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="completedBody"></tbody>
+    </table>
+</div>
+
+<script>
+function addTask() {
+
+    let input = document.getElementById("taskInput");
+    let task = input.value;
+
+    if (task === "") return;
+
+    let li = document.createElement("li");
+    let span = document.createElement("span");
+    span.innerText = task;
+
+    let doneBtn = document.createElement("button");
+    doneBtn.innerText = "Done";
+
+    doneBtn.onclick = function () {
+
+        if (li.dataset.done) return;
+
+        li.classList.add("completed");
+        let row = document.createElement("tr");
+
+        let taskCell = document.createElement("td");
+        taskCell.innerText = task;
+
+        let actionCell = document.createElement("td");
+        let delCompletedBtn = document.createElement("button");
+        delCompletedBtn.innerText = "Delete";
+        delCompletedBtn.className = "delete-btn";
+        delCompletedBtn.onclick = function () {
+            row.remove();
+        };
+        actionCell.appendChild(delCompletedBtn);
+        row.appendChild(taskCell);
+        row.appendChild(actionCell);
+
+        document.getElementById("completedBody").appendChild(row);
+
+        li.dataset.done = "true";
+    };
+
+    let delBtn = document.createElement("button");
+    delBtn.innerText = "Delete";
+    delBtn.className = "delete-btn";
+    delBtn.onclick = function () {
+        li.remove();
+    };
+
+    li.appendChild(span);
+    li.appendChild(doneBtn);
+    li.appendChild(delBtn);
+
+    document.getElementById("taskList").appendChild(li);
+
+    input.value = "";
+}
+</script>
+
+</body>
+</html>

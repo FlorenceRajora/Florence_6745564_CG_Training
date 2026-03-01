@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+
+<style>
+    #calculator{
+        display:inline-block;
+        /* width: auto; */
+        padding:20px;
+        border:2px solid black;
+        border-radius:10px;
+        background-color:gray;
+    }
+    body{
+        text-align:center;
+        margin-top:100px;
+        background-color: antiquewhite;
+    }
+
+    input{
+        width:200px;
+        height:40px;
+        font-size:20px;
+        text-align:right;
+    }
+
+    button{
+        width:45px;
+        height:45px;
+        font-size:18px;
+        margin:3px;
+    }
+    button:hover{
+        background:wheat;
+        transform:scale(1.05);
+    }
+</style>
+</head>
+<div id="calculator">
+
+<body>
+
+<h2>Calculator</h2>
+
+<input type="text" id="display" readonly>
+<br>
+
+<button onclick="add('1')">1</button>
+<button onclick="add('2')">2</button>
+<button onclick="add('3')">3</button>
+<button onclick="setOperator('+')">+</button>
+<br>
+
+<button onclick="add('4')">4</button>
+<button onclick="add('5')">5</button>
+<button onclick="add('6')">6</button>
+<button onclick="setOperator('-')">-</button>
+<br>
+
+<button onclick="add('7')">7</button>
+<button onclick="add('8')">8</button>
+<button onclick="add('9')">9</button>
+<button onclick="setOperator('*')">*</button>
+<br>
+
+<button onclick="add('0')">0</button>
+<button onclick="setOperator('/')">/</button>
+<button onclick="calculate()">=</button>
+<button onclick="clearDisplay()">C</button>
+</div>
+<script>
+let firstNumber = "";
+let secondNumber = "";
+let operator = "";
+let display = document.getElementById("display");
+function add(value){
+    if(operator === ""){
+        firstNumber += value;
+        display.value = firstNumber;
+    }else{
+        secondNumber += value;
+        display.value = firstNumber + operator + secondNumber;
+    }
+}
+function setOperator(op){
+    if(firstNumber !== ""){
+        operator = op;
+        display.value = firstNumber + operator;
+    }
+}
+function calculate(){
+    let a = Number(firstNumber);
+    let b = Number(secondNumber);
+    let result = 0;
+
+    if(operator === "+") result = a + b;
+    if(operator === "-") result = a - b;
+    if(operator === "*") result = a * b;
+    if(operator === "/") result = a / b;
+
+    display.value = result;
+    firstNumber = result.toString();
+    secondNumber = "";
+    operator = "";
+}
+function clearDisplay(){
+    firstNumber = "";
+    secondNumber = "";
+    operator = "";
+    display.value = "";
+}
+</script>
+</body>
+</html>

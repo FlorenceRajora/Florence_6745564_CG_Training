@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Application Form</title>
+</head>
+<body>
+    <a href="form1.html" style="float: right; margin: 10px;">Login Page</a>
+    <h2>Update Information</h2>
+    <p>Use the form below to edit your information.</p>
+    <form style="width: 400px; border: 2px solid black; padding: 10px; border-radius: 5px;">
+        <label for="fname"><i>First name:</i></label>
+        <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname"><i>Last name:</i></label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="sport"><i>Favorite sport:</i></label>
+            <input type="text" id="sport" name="sport"><br><br>
+            <label><i>Gender:</i></label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">female</label>
+            <input type="radio" id="notsure" name="gender" value="notsure">
+            <label for="notsure">not sure</label><br><br>
+            <label for="state"><i>State resident:</i></label>
+            <select id="state" name="state">
+                <option value="Jaipur">Jaipur</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Alwar">Alwar</option>
+            </select><br><br>
+            <input type="checkbox" id="age21" name="age21">
+            <label for="age21">21 or older</label><br><br>
+            <label><i>Car models owned:</i></label>
+            <input type="checkbox" id="ford" name="car" value="Ford">
+            <label for="ford">Ford</label>
+            <input type="checkbox" id="chrysler" name="car" value="Chrysler">
+            <label for="chrysler">Chrysler</label>
+            <input type="checkbox" id="toyota" name="car" value="Toyota">
+            <label for="toyota">Toyota</label>
+            <input type="checkbox" id="nissan" name="car" value="Nissan">
+            <label for="nissan">Nissan</label><br><br>
+            <button type="submit">Save Changes</button>
+    </form>
+</body>
+</html>
