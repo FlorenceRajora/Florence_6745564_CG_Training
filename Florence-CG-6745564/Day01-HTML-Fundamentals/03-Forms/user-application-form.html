@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Application Form</title>
+</head>
+
+<body>
+    <fieldset style="width: 600px; padding: 30px;">
+        <legend style="color: red; font-size: 20px;">User Application Form</legend>
+
+        <form>
+            <table cellpadding="15" style="width: 100%;">
+                <tr>
+                    <td style="width: 120px;">First Name</td>
+                    <td><input type="text" name="firstname" size="30"></td>
+                    <td rowspan="5" align="right" valign="top" style="width: 150px;">
+                        <button type="submit" style="padding: 10px 30px; font-size: 16px;">Submit</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" name="lastname" size="30"></td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign="top">Address</td>
+                    <td><textarea name="address" rows="4" cols="28"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td>Email Id</td>
+                    <td><input type="email" name="email" size="35"></td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</body>
+
+</html>

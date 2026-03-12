@@ -1,0 +1,71 @@
+/* *{
+    color: olive;
+    background-color: black;
+} */
+
+
+/* body{
+
+    background-color: blanchedalmond;
+
+}
+
+p1{
+    color: brown;
+}
+p2{
+    color: green;
+}
+h1,h2{
+    color: blueviolet;
+} */
+
+/* body div div h1{
+    color: red;
+    background-color: green;
+} */
+
+/* body>#div1{
+    color: blue;
+    background-color: yellow;
+}
+h1+h1{
+    color: black;
+    background-color: pink;
+} */
+
+/* h1~h1{
+    color: black;
+    background-color: pink;
+} */
+
+p::first-letter{
+    color: red;
+    font-size: 20px;
+}
+p::after{
+    content: "😊😂";
+
+}
+ ul li::marker{
+    color: red;
+ } 
+
+ p::selection{
+    color: pink;
+    background-color:orangered;
+ }
+
+ /* hover */
+ p:hover{
+    background-color: violet;
+ }
+ a:active{
+    color: black;
+ }
+ a:visited{
+    color: green;
+ }
+ a:link{
+    color: magenta;
+ }

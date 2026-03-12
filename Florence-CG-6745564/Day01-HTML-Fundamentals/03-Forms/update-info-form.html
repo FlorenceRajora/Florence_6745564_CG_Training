@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Information</title>
+</head>
+<body>
+    <h1>Update Information</h1>
+    
+    <p style="color: gray; font-size: 18px;">Use the form below to edit your information.</p>
+    
+    <form>
+        <i>First name:</i> <input type="text" name="firstname" value="Bruce" size="40"><br><br>
+        
+        <i>Last name:</i> <input type="text" name="lastname" value="Phillips" size="40"><br><br>
+        
+        <i>Favorite sport:</i> <input type="text" name="sport" value="basketball" size="20" list="sports">
+        <datalist id="sports">
+            <option value="basketball">
+            <option value="football">
+            <option value="cricket">
+            <option value="tennis">
+        </datalist>
+        <br><br>
+        
+        <i>Gender:</i> 
+        <input type="radio" name="gender" value="male"> male
+        <input type="radio" name="gender" value="female"> female
+        <input type="radio" name="gender" value="notsure" checked> not sure
+        <br><br>
+        
+        <i>State resident:</i> 
+        <select name="state">
+            <option value="Kansas" selected>Kansas</option>
+            <option value="Texas">Texas</option>
+            <option value="California">California</option>
+            <option value="New York">New York</option>
+        </select>
+        <br><br>
+        
+        <input type="checkbox" name="age" checked> 21 or older
+        <br><br>
+        
+        <i>Car models owned:</i> 
+        <input type="checkbox" name="car1" value="Ford" checked> Ford
+        <input type="checkbox" name="car2" value="Chrysler"> Chrysler
+        <input type="checkbox" name="car3" value="Toyota"> Toyota
+        <input type="checkbox" name="car4" value="Nissan" checked> Nissan
+        <br><br>
+        
+        <button type="submit" style="padding: 10px 30px; float: right;">Save Changes</button>
+    </form>
+</body>
+</html>

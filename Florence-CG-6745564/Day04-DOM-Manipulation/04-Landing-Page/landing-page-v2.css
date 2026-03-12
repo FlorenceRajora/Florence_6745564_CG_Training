@@ -1,0 +1,190 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width:100%;
+    height:100vh;
+}
+
+/* ===== MAIN BACKGROUND ===== */
+.main{
+    width:100%;
+    height:100vh;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+    url("download.jpg");   /* Put your image path here */
+    background-position:center;
+    background-size:cover;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    width:100%;
+    height:75px;
+    background: linear-gradient(to right, #3a2a1b, #6b4b2a);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 80px;
+}
+
+.logo{
+    color:#ff7200;
+    font-size:35px;
+    font-weight:bold;
+}
+
+/* MENU */
+.menu ul{
+    display:flex;
+    list-style:none;
+}
+
+.menu ul li{
+    margin-left:40px;
+}
+
+.menu ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s ease;
+}
+
+.menu ul li a:hover{
+    color:#ff7200;
+}
+
+/* SEARCH BOX */
+.search{
+    display:flex;
+    align-items:center;
+}
+
+.srch{
+    padding:8px;
+    border:none;
+    outline:none;
+    border-radius:3px 0 0 3px;
+}
+
+.btn{
+    background:#ff7200;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    cursor:pointer;
+    border-radius:0 3px 3px 0;
+}
+
+/* ===== HERO CONTENT ===== */
+.content{
+    width:1200px;
+    margin:auto;
+    color:white;
+    position:relative;
+    padding-top:120px;
+}
+
+.content h1{
+    font-size:50px;
+    letter-spacing:2px;
+}
+
+.content span{
+    color:#ff7200;
+}
+
+.content p{
+    margin-top:20px;
+    width:500px;
+    line-height:25px;
+    font-size:16px;
+}
+
+.cn{
+    margin-top:25px;
+    background:#ff7200;
+    border:none;
+    padding:12px 25px;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.cn a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+
+.cn:hover{
+    background:white;
+}
+
+.cn:hover a{
+    color:black;
+}
+
+/* ===== LOGIN FORM ===== */
+.form{
+    width:300px;
+    height:380px;
+    background:rgba(0,0,0,0.8);
+    position:absolute;
+    top:150px;
+    right:100px;
+    border-radius:10px;
+    padding:25px;
+}
+
+.form h2{
+    text-align:center;
+    background:white;
+    color:#ff7200;
+    padding:8px;
+    border-radius:5px;
+    margin-bottom:20px;
+}
+
+.form input{
+    width:100%;
+    height:35px;
+    margin-bottom:20px;
+    background:transparent;
+    border:1px solid #ff7200;
+    color:white;
+    padding-left:10px;
+    outline:none;
+}
+
+.form input::placeholder{
+    color:#ccc;
+}
+
+.btnn{
+    width:100%;
+    height:40px;
+    background:#ff7200;
+    border:none;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.btnn:hover{
+    background:white;
+    color:black;
+}
+
+.link{
+    text-align:center;
+    margin-top:15px;
+    font-size:14px;
+}
