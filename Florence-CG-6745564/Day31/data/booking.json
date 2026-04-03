@@ -1,0 +1,42 @@
+{
+  "createBooking": {
+    "valid": {
+      "firstname": "Jim",
+      "lastname": "Brown",
+      "totalprice": 111,
+      "depositpaid": true,
+      "bookingdates": {
+        "checkin": "2025-01-01",
+        "checkout": "2025-01-10"
+      },
+      "additionalneeds": "Breakfast"
+    },
+    "missingFields": {
+      "firstname": "OnlyFirst"
+    }
+  },
+  "updateBooking": {
+    "valid": {
+      "firstname": "James",
+      "lastname": "Brown",
+      "totalprice": 200,
+      "depositpaid": false,
+      "bookingdates": {
+        "checkin": "2025-06-01",
+        "checkout": "2025-06-15"
+      },
+      "additionalneeds": "Lunch"
+    }
+  },
+  "getBooking": {
+    "validId": 1,
+    "invalidId": 999999
+  },
+  "expectedStatusCodes": {
+    "ok": 200,
+    "notFound": 404,
+    "forbidden": 403,
+    "methodNotAllowed": 405,
+    "serverError": 500
+  }
+}

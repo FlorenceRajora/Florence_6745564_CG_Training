@@ -1,0 +1,16 @@
+{
+  "name": "restful-booker-pom-tests",
+  "version": "1.0.0",
+  "description": "Playwright API tests for Restful Booker using POM + JSON data",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:auth": "npx playwright test tests/auth.spec.ts",
+    "test:booking": "npx playwright test tests/booking.spec.ts",
+    "test:report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.5.0",
+    "typescript": "^5.4.0"
+  }
+}
